@@ -1,4 +1,5 @@
 import Agent from "../components/Agent";
+import Best from "../components/Best";
 import Cards from "../components/Cards";
 
 
@@ -10,6 +11,10 @@ const Home = () => {
 
             {/* all cards */}
             <Cards></Cards>
+
+
+            {/* Why Choose us */}
+            <Best></Best>
 
             {/* Our Agents */}
             <Agent></Agent>

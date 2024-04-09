@@ -19,7 +19,7 @@ const Agent = () => {
                 <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12  md:grid-cols-2 lg:grid-cols-3">
                    
                     
-                   <div className="space-y-4 border px-4 py-2 rounded-xl shadow-md">
+                   <div className="space-y-4 border px-4 py-2 rounded-xl shadow-md ">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-lg" src={person1} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Sarah Ali</h4>
@@ -31,6 +31,7 @@ const Agent = () => {
                                 <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
+                        
                     </div>
                     <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={person2} />
