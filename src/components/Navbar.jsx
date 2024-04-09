@@ -20,7 +20,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex gap-2 items-center">
                     <img className="w-9 lg:w-14" src={navLogo} alt="" />
-                    <p className="lg:text-2xl text-xl font-medium up lg:font-bold">Livin<span className="text-rose-500">g</span>Lane</p>
+                    <p className="lg:text-2xl raleway text-xl font-medium up lg:font-bold">Livin<span className="text-rose-500">g</span>Lane</p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
