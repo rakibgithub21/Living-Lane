@@ -4,6 +4,9 @@ import person3 from '../assets/Alex.jpg'
 import person4 from '../assets/6_57.jpg'
 import person5 from '../assets/images.jpg'
 import person6 from '../assets/6_13.jpg'
+import { TiSocialFacebook } from "react-icons/ti";
+import { TiSocialInstagram } from "react-icons/ti";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Agent = () => {
     return (
@@ -16,16 +19,16 @@ const Agent = () => {
                 <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12  md:grid-cols-2 lg:grid-cols-3">
                    
                     
-                   <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
+                   <div className="space-y-4 border px-4 py-2 rounded-xl shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-lg" src={person1} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Sarah Ali</h4>
                             <p className="text-lg font-medium raleway dark:text-gray-600 text-center"> Real Estate Agent </p>
                             <p className="text-lg dark:text-gray-600 text-center"> Single homes Specialized</p>
-                            <div className="flex mt-2 space-x-2">
-                                
-                               
-                               
+                            <div className="flex mt-2 text-2xl space-x-2">
+                                <a href=""><TiSocialFacebook className='text-blue-600' /></a>
+                                <a href=""><TiSocialInstagram className='text-pink-400'/></a>
+                                <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
                     </div>
@@ -35,10 +38,10 @@ const Agent = () => {
                             <h4 className="text-xl font-semibold">Thomas Leroy</h4>
                             <p className="text-lg font-medium raleway dark:text-gray-600 text-center"> Real Estate Agent </p>
                             <p className="text-lg dark:text-gray-600 text-center"> Townhouse Specialized</p>
-                            <div className="flex mt-2 space-x-2">
-                               
-                               
-                                
+                            <div className="flex mt-2 text-2xl space-x-2">
+                                <a href=""><TiSocialFacebook className='text-blue-600' /></a>
+                                <a href=""><TiSocialInstagram className='text-pink-400' /></a>
+                                <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
                     </div>
@@ -49,10 +52,10 @@ const Agent = () => {
                             <p className="text-lg font-medium raleway dark:text-gray-600 text-center"> Real Estate Agent </p>
                             <p className="text-lg dark:text-gray-600 text-center"> Student Housing Specialized</p>
                         
-                            <div className="flex mt-2 space-x-2">
-                               
-                                
-                               
+                            <div className="flex mt-2 text-2xl space-x-2">
+                                <a href=""><TiSocialFacebook className='text-blue-600' /></a>
+                                <a href=""><TiSocialInstagram className='text-pink-400' /></a>
+                                <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
                     </div>
@@ -62,9 +65,10 @@ const Agent = () => {
                             <h4 className="text-xl font-semibold">Emily Ken</h4>
                             <p className="text-lg font-medium raleway dark:text-gray-600 text-center"> Real Estate Agent </p>
                             <p className="text-lg dark:text-gray-600 text-center"> Senior Living Specialized</p>
-                            <div className="flex mt-2 space-x-2">
-                               
-                                
+                            <div className="flex mt-2 text-2xl space-x-2">
+                                <a href=""><TiSocialFacebook className='text-blue-600' /></a>
+                                <a href=""><TiSocialInstagram className='text-pink-400' /></a>
+                                <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
                     </div>
@@ -74,9 +78,10 @@ const Agent = () => {
                             <h4 className="text-xl font-semibold">Anjo Lebra</h4>
                             <p className="text-lg font-medium raleway dark:text-gray-600 text-center"> Real Estate Agent </p>
                             <p className="text-lg dark:text-gray-600 text-center"> Vacation Specialized</p>
-                            <div className="flex mt-2 space-x-2">
-                               
-                                
+                            <div className="flex mt-2 text-2xl space-x-2">
+                                <a href=""><TiSocialFacebook className='text-blue-600' /></a>
+                                <a href=""><TiSocialInstagram className='text-pink-400' /></a>
+                                <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
                     </div>
@@ -86,8 +91,10 @@ const Agent = () => {
                             <h4 className="text-xl font-semibold">David Jhon</h4>
                             <p className="text-lg font-medium raleway dark:text-gray-600 text-center"> Real Estate Agent </p>
                             <p className="text-lg dark:text-gray-600 text-center"> Apartment Specialized</p>
-                            <div className="flex mt-2 space-x-2">
-                               
+                            <div className="flex mt-2 text-2xl space-x-2">
+                                <a href=""><TiSocialFacebook className='text-blue-600' /></a>
+                                <a href=""><TiSocialInstagram className='text-pink-400' /></a>
+                                <a href=""><FaSquareXTwitter /></a>
                             </div>
                         </div>
                     </div>
