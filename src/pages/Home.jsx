@@ -1,3 +1,4 @@
+import Agent from "../components/Agent";
 import Cards from "../components/Cards";
 
 
@@ -9,6 +10,9 @@ const Home = () => {
 
             {/* all cards */}
             <Cards></Cards>
+
+            {/* Our Agents */}
+            <Agent></Agent>
         </div>
     );
 };
