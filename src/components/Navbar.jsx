@@ -1,7 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import navLogo from '../assets/acquisition_12140441.png'
+import { useContext } from "react";
+import { AuthContext } from "./AuthContextComponent";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
+    const { logout } = useContext(AuthContext)
+    const logoutUser = () => {
+        logout()
+            .then(() => {
+            toast.success('Logout SuccessFully')
+        })
+    }
     return (
         <div className="navbar container mx-auto bg-base-100 py-4">
             <div className="navbar-start">
@@ -33,7 +45,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <Link className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-lg md:px-6 md:py-3 py-2 px-4 " to={'/login'}>Log in</Link>
+                <button onClick={logoutUser} className="btn btn-primary ml-3">Logout</button>
             </div>
+            <ToastContainer position="top-center"/>
         </div>
     );
 };

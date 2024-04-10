@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../components/AuthContextComponent";
 // import { FaRegEye } from "react-icons/fa";
 // import { FaRegEyeSlash } from "react-icons/fa";
-// import { useState } from "react";
+// import { useState } from "react"
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';;
 
 
 const Login = () => {
@@ -27,7 +30,8 @@ const Login = () => {
         // sign in user
         signInUser(email, password)
             .then(result => {
-            console.log(result.user);
+                console.log(result.user);
+                toast.success('Login SuccessFully')
             })
             .catch(error => {
             console.log(error.message);
@@ -85,6 +89,7 @@ const Login = () => {
 
                 </p>
             </div>
+            <ToastContainer position="top-center"/>
         </div>
     );
 };

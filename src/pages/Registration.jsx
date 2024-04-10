@@ -36,7 +36,8 @@ const Registration = () => {
                 console.log(result.user);
                 // update user
                 updateUser(name, image)
-                toast("Registration success.Login now")
+                // logout imidieatly
+                toast.success("Registration success.Login now")
                 
             })
             .catch(error => {
