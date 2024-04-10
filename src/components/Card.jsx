@@ -6,7 +6,7 @@ import { TbPointFilled } from "react-icons/tb";
 
 
 const Card = ({ card }) => {
-    console.log(card)
+    // console.log(card)
     const { id, image_url, segment_name, nearby_attractions, bedrooms,bathrooms, price, status, location, } = card
     return (
         <div className="card relative bg-base-100 shadow-xl border-2 transition-all duration-500 hover:scale-95 hover:border-pink-400">

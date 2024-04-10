@@ -1,9 +1,11 @@
+
 import Agent from "../components/Agent";
 import Best from "../components/Best";
 import Cards from "../components/Cards";
 
 
 const Home = () => {
+   
     return (
         <div className="container mx-auto">
            

@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../components/AuthContextComponent";
+
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const Registration = () => {
+    const { createUser, updateUser } = useContext(AuthContext);
     // for password show and hide
     const [showPassword, setShowPassword] = useState(false)
     const handlePassword = () => {
@@ -23,9 +29,22 @@ const Registration = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        // console.log(data)
         const { name, email, image, password } = data;
-        console.log(name, password, image, email);
+        //create user:
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                // update user
+                updateUser(name, image)
+                toast("Registration success.Login now")
+                
+            })
+            .catch(error => {
+            console.log(error);
+        })
+        
+        
+
 
     
     }
@@ -93,6 +112,7 @@ const Registration = () => {
                     <Link className="underline font-medium hover:text-blue-400 text-lg" to={'/login'}>Login</Link>
                 </p>
             </div>
+            <ToastContainer position="top-center"/>
         </div>
     );
 };
