@@ -6,6 +6,13 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { FaVectorSquare } from "react-icons/fa";
 import { FiCheckSquare } from "react-icons/fi";
 
+// agent profile icons
+import { MdOutlineVerified } from "react-icons/md";
+import { FaBlenderPhone } from "react-icons/fa";
+
+import { BiSolidMessageDetail } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+
 import image1 from '../assets/images/1.jpg'
 import image2 from '../assets/images/2.jpg'
 import image3 from '../assets/images/3.jpg'
@@ -108,17 +115,28 @@ const PropertyDetails = () => {
 
                 {/* agent div */}
                 <div className='lg:col-span-2 p-4'>
-                    <div className="p-6 border-2 border-pink-400 rounded-lg shadow-md sm:p-12 dark:bg-gray-50 dark:text-gray-800 lg:text-xl">
-                        <div className="flex  flex-col space-y-4 md:space-y-0 md:space-x-6">
-                            <img src={image} alt="" className="self-center flex-shrink-0 w-36 h-36 object-cover border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-300" />
-                            <div className="flex flex-col">
-                                <h4 className=" font-semibold text-center md:text-left">{name}</h4>
-                                <p className="dark:text-gray-600">{details}</p>
+
+                    <div className='border border-rose-400 p-4 rounded-2xl'>
+
+                        <div>
+                            <div>
+                                <img className='w-full object-cover h-[300px] rounded-2xl' src={image} alt="" />
+                                <div className='px-6 py-2 mb-2'>
+                                    <p className='text-4xl  font-semibold raleway'>{name}</p>
+                                    <p className='raleway font-medium flex gap-1 text-xl'>Verified Agent <span><MdOutlineVerified className='text-blue-600' /></span></p>
+                                    <p className='mb-2 font-medium raleway'>{estate_title}</p>
+                                    <p className='text-lg poppins'>{details}</p>
+                                </div>
+                                <div className='flex flex-wrap items-center justify-center gap-2'>
+                                    <p className='border px-6 py-4 font-bold rounded-2xl flex items-center gap-1 text-lg text-black'><FaBlenderPhone />Call</p>
+                                    <p className='border px-6 py-4 flex items-center gap-1 font-bold rounded-2xl text-lg text-black'><BiSolidMessageDetail />Message</p>
+                                    <p className='border px-6 flex items-center gap-1 py-4 font-bold rounded-2xl text-lg text-black'><MdEmail />Email</p>
+                                </div>
                             </div>
                         </div>
-                        <div className="flex justify-center pt-4 space-x-4 align-center">
-                           
-                        </div>
+
+
+
                     </div>
                 </div>
 
