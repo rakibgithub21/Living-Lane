@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 
 const Login = () => {
+    const [showPassword, setShowPassword] = useState(false)
+    const handlePassword = () => {
+        setShowPassword(!showPassword)
+    }
     return (
         <div className="min-h-[calc(100vh-410px)]  flex justify-center items-center">
             <div className="w-full md:w-4/6 lg:w-3/6 mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
@@ -13,9 +20,14 @@ const Login = () => {
                         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
                         <input type="email" id="email" placeholder="Type Your Email" className="input input-bordered w-full" />
                     </div>
-                    <div className="space-y-1 text-lg">
+                    <div className="space-y-1 text-lg relative">
                         <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                        <input type="password" id="password" placeholder="Type Your Email" className="input input-bordered w-full" />
+                        <input type={showPassword?"text":"password"} id="password" placeholder="Type Your Email" className="input input-bordered w-full" />
+                        <p onClick={handlePassword} className="absolute top-11 right-5">
+                            {
+                                showPassword ? <FaRegEye className="text-xl" /> : <FaRegEyeSlash className="text-xl" />
+                            }
+                        </p>
                     </div>
                     <button type="submit" className="block btn hover:text-white text-xl btn-success w-full">Login</button>
                 </form>
@@ -41,7 +53,7 @@ const Login = () => {
                         </svg>
                     </button>
                 </div>
-                <p className="text-lg text-center  sm:px-6 dark:text-gray-600">Don't have an account?
+                <p className="text-lg text-center  sm:px-6 dark:text-gray-600">Don Not have an Account?
                     <Link className="underline font-medium hover:text-blue-400 text-lg ml-2" to={'/registration'}>Register</Link>
 
                 </p>
