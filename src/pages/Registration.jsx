@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 
 
 const Registration = () => {
+    // for password show and hide
+    const [showPassword, setShowPassword] = useState(false)
+    const handlePassword = () => {
+        setShowPassword(!showPassword)
+    }
+    // -----------------------------------
+
+    // react hook from for get input value and easy to validation:
     const {
         register,
         handleSubmit,
@@ -14,10 +25,11 @@ const Registration = () => {
     const onSubmit = (data) => {
         // console.log(data)
         const { name, email, image, password } = data;
-        console.log(password);
+        console.log(name, password, image, email);
 
     
     }
+    // --------------------------------------------------
 
 
     return (
@@ -45,7 +57,7 @@ const Registration = () => {
                         <input {...register("image", { required: true })} type="text" id="image" placeholder="Your Image Link" className="input focus:ring-2 focus:ring-stone-950 ring-1 ring-indigo-500 input-bordered w-full" />
                         {errors.image && <span className="text-red-500">This field is required</span>}
                     </div>
-                    <div className="space-y-1 text-lg">
+                    <div className="space-y-1 relative text-lg">
                         <label htmlFor="password" className="block dark:text-gray-600">Password</label>
                         <input {...register("password", {
                             required: true,
@@ -54,8 +66,14 @@ const Registration = () => {
                                 uppercase: value => /[A-Z]/.test(value),
                                 lowercase: value => /[a-z]/.test(value)
                             }
+                            
                         
-                        })} type="password" id="password" placeholder="Type Your Email" className="input focus:ring-2 focus:ring-stone-950 ring-1 ring-indigo-500 input-bordered w-full" />
+                        })} type={showPassword ?"text":"password"} id="password" placeholder="Type Your Email" className="input focus:ring-2 focus:ring-stone-950 ring-1 ring-indigo-500 input-bordered w-full" />
+                        <p onClick={handlePassword} className="absolute top-11 right-5">
+                            {
+                                showPassword ? <FaRegEye className="text-xl" /> : <FaRegEyeSlash className="text-xl" />
+                            }
+                        </p>
                         {errors.password && errors.password.type === "required" && (
                             <span className="text-red-500">This field is required</span>
                         )}
