@@ -15,7 +15,8 @@ const PropertyDetails = () => {
     const datas = useLoaderData();
     const { id } = useParams()
     const data = datas.find(data => data.id == id);
-    const { estate_title, image_url, description, details_location, additional_details, bathrooms, area, status, price, bedrooms, facilities } = data;
+    const { estate_title, agent, image_url, description, details_location, additional_details, bathrooms, area, status, price, bedrooms, facilities } = data;
+    const { details, image, name } = agent;
     console.log(data);
     return (
         <div className='container mx-auto my-10'>
@@ -42,8 +43,8 @@ const PropertyDetails = () => {
             </div>
             {/* ----------------- */}
 
-            <div className='grid grid-cols-1 lg:grid-cols-5 my-8'>
-                
+            <div className='grid grid-cols-1 lg:grid-cols-5 my-8 gap-10'>
+
                 <div className='lg:col-span-3'>
                     <div>
 
@@ -106,8 +107,19 @@ const PropertyDetails = () => {
                 </div>
 
                 {/* agent div */}
-                <div className='lg:col-span-2'>
-
+                <div className='lg:col-span-2 p-4'>
+                    <div className="p-6 border-2 border-pink-400 rounded-lg shadow-md sm:p-12 dark:bg-gray-50 dark:text-gray-800 lg:text-xl">
+                        <div className="flex  flex-col space-y-4 md:space-y-0 md:space-x-6">
+                            <img src={image} alt="" className="self-center flex-shrink-0 w-36 h-36 object-cover border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-300" />
+                            <div className="flex flex-col">
+                                <h4 className=" font-semibold text-center md:text-left">{name}</h4>
+                                <p className="dark:text-gray-600">{details}</p>
+                            </div>
+                        </div>
+                        <div className="flex justify-center pt-4 space-x-4 align-center">
+                           
+                        </div>
+                    </div>
                 </div>
 
 
