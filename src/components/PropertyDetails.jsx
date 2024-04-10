@@ -13,16 +13,16 @@ import { FaBlenderPhone } from "react-icons/fa";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 
-import image1 from '../assets/images/1.jpg'
-import image2 from '../assets/images/2.jpg'
-import image3 from '../assets/images/3.jpg'
-import image4 from '../assets/images/4.jpg'
+// import image1 from '../assets/images/1.jpg'
+// import image2 from '../assets/images/2.jpg'
+// import image3 from '../assets/images/3.jpg'
+// import image4 from '../assets/images/4.jpg'
 
 const PropertyDetails = () => {
     const datas = useLoaderData();
     const { id } = useParams()
     const data = datas.find(data => data.id == id);
-    const { estate_title, agent, image_url, description, details_location, additional_details, bathrooms, area, status, price, bedrooms, facilities } = data;
+    const { estate_title, agent, image_url, description, image_url_1, image_url_2, image_url_3, image_url_4, details_location, additional_details, bathrooms, area, status, price, bedrooms, facilities } = data;
     const { details, image, name } = agent;
     console.log(data);
     return (
@@ -35,16 +35,16 @@ const PropertyDetails = () => {
 
                 <div className='lg:col-span-2 grid grid-cols-2  border-red-500 gap-x-10 gap-y-5'>
                     <div>
-                        <img className='w-full object-cover h-full rounded-lg' src={image1} alt="" />
+                        <img className='w-full object-cover h-full rounded-lg' src={image_url_1} alt="" />
                     </div>
                     <div>
-                        <img className='w-full h-full object-cover rounded-lg' src={image2} alt="" />
+                        <img className='w-full h-full object-cover rounded-lg' src={image_url_2} alt="" />
                     </div>
                     <div>
-                        <img className='w-full h-full object-cover  rounded-lg' src={image3} alt="" />
+                        <img className='w-full h-full object-cover  rounded-lg' src={image_url_3} alt="" />
                     </div>
                     <div>
-                        <img className='w-full h-full object-cover rounded-lg' src={image4} alt="" />
+                        <img className='w-full h-full object-cover rounded-lg' src={image_url_4} alt="" />
                     </div>
                 </div>
             </div>
@@ -128,9 +128,9 @@ const PropertyDetails = () => {
                                     <p className='text-lg poppins'>{details}</p>
                                 </div>
                                 <div className='flex flex-wrap items-center justify-center gap-2'>
-                                    <p className='border px-6 py-4 font-bold rounded-2xl flex items-center gap-1 text-lg text-black'><FaBlenderPhone />Call</p>
-                                    <p className='border px-6 py-4 flex items-center gap-1 font-bold rounded-2xl text-lg text-black'><BiSolidMessageDetail />Message</p>
-                                    <p className='border px-6 flex items-center gap-1 py-4 font-bold rounded-2xl text-lg text-black'><MdEmail />Email</p>
+                                    <p className='border px-6 py-4 cursor-pointer font-bold rounded-2xl flex items-center gap-1 text-lg text-black'><FaBlenderPhone />Call</p>
+                                    <p className='border px-6 py-4 cursor-pointer flex items-center gap-1 font-bold rounded-2xl text-lg text-black'><BiSolidMessageDetail />Message</p>
+                                    <p className='border cursor-pointer px-6 flex items-center gap-1 py-4 font-bold rounded-2xl text-lg text-black'><MdEmail />Email</p>
                                 </div>
                             </div>
                         </div>
