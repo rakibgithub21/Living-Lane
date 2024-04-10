@@ -8,15 +8,14 @@
     "status": "sale",
     "area": "2500 sq ft",
     "location": "Anytown, USA",
+    "details_location": "123 Main Street, Anytown, USA",
     "facilities": ["Living Room", "Kitchen", "Backyard", "Garage"],
     "bedrooms": 4,
     "bathrooms": 3,
-    "year_built": 2018,
-    "lot_size": "0.25 acres",
     "image_url": "https://i.ibb.co/HKWvzh4/modernsingle.jpg",
     "accessibility_features": ["Wheelchair Ramp", "Wide Doorways"],
-    "pet_friendly": true,
-    "nearby_attractions": ["Parks", "Schools", "Shopping Centers"]
+    "nearby_attractions": ["Parks", "Schools", "Shopping Centers"],
+    "additional_details": "This modern single-family home presents an ideal blend of contemporary aesthetics and comfort, nestled in a serene neighborhood of Anytown, USA. Boasting 4 bedrooms and 3 bathrooms spread across 2500 square feet, this residence offers ample space for families to thrive. Built in 2018, the property features a spacious living room, a fully equipped kitchen, a tranquil backyard, and a convenient garage. Accessibility is ensured with wheelchair ramps and wide doorways, catering to diverse needs. Pet-friendly and proximate to parks, schools, and shopping centers, it embodies the essence of suburban living at its finest."
   },
   {
     "estate_title": "Luxury Apartment",
@@ -27,13 +26,14 @@
     "status": "rent",
     "area": "1200 sq ft",
     "location": "Metropolis, USA",
+    "details_location": "456 High Street, Metropolis, USA",
     "facilities": ["Swimming Pool", "Gym", "Security", "Parking"],
     "bedrooms": 2,
     "bathrooms": 2,
     "image_url": "https://i.ibb.co/Gvk2Ftk/luxury-apartments.jpg",
     "accessibility_features": [],
-    "pet_friendly": false,
-    "nearby_attractions": ["Restaurants","Parks", "Public Transportation"]
+    "nearby_attractions": ["Restaurants","Parks", "Public Transportation"],
+    "additional_details": "Welcome to the epitome of urban luxury living in the heart of Metropolis, USA. This exquisite apartment offers breathtaking city views and indulgent amenities. With 2 bedrooms, 2 bathrooms, and 1200 square feet of lavish space, residents can relish in comfort and sophistication. Facilities include a refreshing swimming pool, a state-of-the-art gym, round-the-clock security, and convenient parking. While pets aren't accommodated, residents enjoy easy access to fine dining, parks, and public transportation, enriching their metropolitan lifestyle."
   },
   {
     "estate_title": "Cozy Townhouse",
@@ -44,13 +44,14 @@
     "status": "sale",
     "area": "1800 sq ft",
     "location": "Suburbia, USA",
+    "details_location": "789 Elm Avenue, Suburbia, USA",
     "facilities": ["Living Room", "Kitchen", "Backyard", "Garage"],
     "bedrooms": 3,
     "bathrooms": 2,
     "image_url": "https://i.ibb.co/TqRXjgP/Townhouse.jpg",
     "accessibility_features": ["Wide Doorways"],
-    "pet_friendly": true,
-    "nearby_attractions": ["Playgrounds", "Schools", "Grocery Stores"]
+    "nearby_attractions": ["Playgrounds", "Schools", "Grocery Stores"],
+    "additional_details": "Tucked away in the charming suburbia of USA, this cozy townhouse exudes warmth and family-friendly charm. Featuring 3 bedrooms, 2 bathrooms, and 1800 square feet of inviting space, it's the perfect sanctuary for creating lasting memories. The fenced backyard offers privacy and security, ideal for both relaxation and play. Complete with a garage, a living room, and a kitchen, this townhouse caters to everyday convenience. With wide doorways for accessibility and proximity to playgrounds, schools, and grocery stores, it's a haven for families seeking suburban bliss."
   },
   {
     "estate_title": "Student Housing",
@@ -61,14 +62,15 @@
     "status": "rent",
     "area": "120 sq ft (per room)",
     "location": "University Town, USA",
+    "details_location": "101 College Road, University Town, USA",
     "facilities": ["Shared Kitchen", "Study Room", "Laundry Facilities"],
     "bedrooms": 4,
     "bathrooms": 2,
     "distance_to_campus": "0.5 miles",
     "image_url": "https://i.ibb.co/2PQq1DG/Student-Housing-Renovation-Clark-Nexsen-1200.jpg",
     "accessibility_features": [],
-    "pet_friendly": false,
-    "nearby_attractions": ["Campus Facilities", "Restaurants", "Public Transportation"]
+    "nearby_attractions": ["Campus Facilities", "Restaurants", "Public Transportation"],
+    "additional_details": "Embrace the ultimate collegiate experience with this spacious student housing situated in the bustling University Town, USA. Designed for communal living, each of the 4 bedrooms comes with shared amenities, fostering a vibrant academic community. Residents benefit from a shared kitchen, study room, and laundry facilities, ensuring convenience and camaraderie. Just half a mile from campus facilities and surrounded by restaurants and public transportation, this accommodation offers both comfort and connectivity for students pursuing their academic journey."
   },
   {
     "estate_title": "Senior Living Community",
@@ -77,15 +79,16 @@
     "description": "A vibrant senior living community offering various activities and amenities for retirees.",
     "price": "$3,000/month",
     "status": "rent",
-    "area": "500 sq ft (studio)",
+    "area": "500 sq ft ",
     "location": "Serenity City, USA",
+    "details_location": "222 Peaceful Lane, Serenity City, USA",
     "facilities": ["Community Center", "Fitness Center", "Walking Trails"],
     "bathrooms": 1,
     "bedrooms": 1,
     "image_url": "https://i.ibb.co/nwcZvVw/senior.jpg",
     "accessibility_features": ["Wide Doorways", "Grab Bars in Bathrooms"],
-    "pet_friendly": false,
-    "nearby_attractions": ["Medical Facilities", "Parks", "Shopping Centers"]
+    "nearby_attractions": ["Medical Facilities", "Parks", "Shopping Centers"],
+    "additional_details": "Experience a fulfilling retirement lifestyle in the tranquil surroundings of Serenity City, USA. This vibrant senior living community offers a cozy studio apartment with 500 square feet of space, thoughtfully designed for comfort and accessibility. Residents enjoy a range of amenities including a community center, fitness center, and scenic walking trails, promoting active and engaging lifestyles. With wide doorways and grab bars in bathrooms for added safety, along with nearby medical facilities, parks, and shopping centers, this community fosters well-being and contentment for retirees."
   },
   {
     "estate_title": "Vacation Rental",
@@ -96,6 +99,7 @@
     "status": "rent",
     "area": "1000 sq ft",
     "location": "Seaside Town, USA",
+    "details_location": "777 Ocean View Drive, Seaside Town, USA",
     "facilities": ["Ocean View", "Outdoor Grill", "Fireplace"],
     "maximum_guests": 6,
     "minimum_stay_duration": 2,
@@ -103,6 +107,7 @@
     "bedrooms": 2,
     "image_url": "https://i.ibb.co/F01pYLB/vacational-rental.webp",
     "pet_friendly": true,
-    "nearby_attractions": ["Beaches", "Restaurants", "Tourist Attractions"]
+    "nearby_attractions": ["Beaches", "Restaurants", "Tourist Attractions"],
+    "additional_details": "Escape to relaxation in this charming vacation rental nestled in the picturesque Seaside Town, USA. Boasting 2 bedrooms, 2 bathrooms, and 1000 square feet of coastal charm, it offers the perfect retreat for up to 6 guests. With ocean views, an outdoor grill, and a cozy fireplace, every moment promises tranquility and serenity. Pet-friendly and within proximity to beaches, restaurants, and tourist attractions, this rental invites guests to unwind and create cherished memories by the sea."
   }
 ]

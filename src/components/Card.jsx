@@ -34,13 +34,13 @@ const Card = ({ card }) => {
                             <p className="font-light">Bedrooms</p>
                        </div>
                         <div>
-                            <p className="flex gap-1 items-center">{bedrooms} <LuBath /></p>
+                            <p className="flex gap-1 items-center">{bathrooms} <LuBath /></p>
                             <p className="font-light">Bathrooms</p>
                        </div>
                     </div>
                     <p className="flex poppins text-lg items-center gap-2"><IoLocationSharp className="text-[#AEAEAE] text-2xl" /><span className="text-[#6b6363]">{location}</span></p>
                     <div className="flex justify-end">
-                        <button className="btn btn-outline font-semibold text-xl">View Property</button>
+                        <Link to={`/view-property/${id}`} className="btn btn-outline font-semibold text-xl">View Property</Link>
                     </div>
                 </div>
                 
