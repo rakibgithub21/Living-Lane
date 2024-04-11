@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/bookmark',
-                element: <Bookmarked></Bookmarked>
+                element: <PrivateRoute><Bookmarked></Bookmarked></PrivateRoute>
             },
            
         ]

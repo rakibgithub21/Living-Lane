@@ -15,9 +15,9 @@ const UpdateProfile = () => {
         return <Navigate to={'/login'}></Navigate>;
     }
 
-    if (loading) {
-        return <Loading></Loading>;
-    }
+    // if (loading) {
+    //     return <Loading></Loading>;
+    // }
 
     const onSubmit = (data) => {
         const { name, image, email } = data;
