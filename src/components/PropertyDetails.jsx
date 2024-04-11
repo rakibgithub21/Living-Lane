@@ -12,6 +12,7 @@ import { FaBlenderPhone } from "react-icons/fa";
 
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
+import { Helmet } from 'react-helmet-async';
 
 // import image1 from '../assets/images/1.jpg'
 // import image2 from '../assets/images/2.jpg'
@@ -27,6 +28,9 @@ const PropertyDetails = () => {
     console.log(data);
     return (
         <div className='container mx-auto my-10'>
+            <Helmet>
+                <title>LivingLane || Property Details { id}</title>
+            </Helmet>
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-10'>
 
                 <div className='lg:col-span-3 object-cover border-purple-700'>

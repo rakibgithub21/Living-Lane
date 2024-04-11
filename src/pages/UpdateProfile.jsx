@@ -3,6 +3,7 @@ import { AuthContext } from "../components/AuthContextComponent";
 import { Navigate } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import Loading from "../components/Loading";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -32,6 +33,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-700 to-indigo-600">
+            <Helmet>
+                <title>LivingLane || Update Profile </title>
+            </Helmet>
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
                 <h1 className="text-3xl font-semibold text-center mb-6 text-gray-800 dark:text-white">Update Your Profile</h1>
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">

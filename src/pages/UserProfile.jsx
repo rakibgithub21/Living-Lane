@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../components/AuthContextComponent";
 import Loading from "../components/Loading";
 import {Navigate} from 'react-router-dom'
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
     const { loading, user } = useContext(AuthContext)
@@ -13,6 +14,9 @@ const UserProfile = () => {
     }
     return (
         <div className="flex justify-center items-center h-[65vh]">
+            <Helmet>
+                <title>LivingLane | Profile</title>
+            </Helmet>
             <div className="min-w-36 bg-slate-200 rounded-md border p-8 sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                     <img src={user.photoURL} className="object-contain w-full h-full rounded dark:bg-gray-500" />
