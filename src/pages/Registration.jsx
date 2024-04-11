@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../components/AuthContextComponent";
-
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,12 +12,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Registration = () => {
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, logout } = useContext(AuthContext);
     // for password show and hide
     const [showPassword, setShowPassword] = useState(false)
     const handlePassword = () => {
         setShowPassword(!showPassword)
     }
+    const navigate = useNavigate()
     // -----------------------------------
 
     // react hook from for get input value and easy to validation:
@@ -37,7 +38,9 @@ const Registration = () => {
                 // update user
                 updateUser(name, image)
                 // logout imidieatly
+                logout()
                 toast.success("Registration success.Login now")
+                navigate('/login')
                 
             })
             .catch(error => {
