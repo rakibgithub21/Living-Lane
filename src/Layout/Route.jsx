@@ -9,6 +9,7 @@ import Contactus from "../pages/Contactus";
 import UserProfile from "../pages/UserProfile";
 import UpdateProfile from "../pages/UpdateProfile";
 import PropertyDetails from "../components/PropertyDetails";
+import PrivateRoute from "../components/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -43,7 +44,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/view-property/:id',
-                element: <PropertyDetails></PropertyDetails>,
+                element: <PrivateRoute> <PropertyDetails></PropertyDetails></PrivateRoute>,
                 loader:()=>fetch('../data.json')
             },
            

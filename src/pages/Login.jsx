@@ -6,7 +6,7 @@ import { AuthContext } from "../components/AuthContextComponent";
 // import { FaRegEyeSlash } from "react-icons/fa";
 // import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
-
+import { useNavigate, useLocation } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';;
 
 
@@ -14,6 +14,10 @@ const Login = () => {
 
     const { signInUser, googleLogin } = useContext(AuthContext)
     const [error,setError] = useState('')
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location?.state || '/'
 
     // const [showPassword, setShowPassword] = useState(false)
     // const handlePassword = () => {
@@ -33,6 +37,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success('Login SuccessFully')
+                navigate(from)
             })
             .catch(error => {
                 console.log(error.message);
@@ -46,9 +51,14 @@ const Login = () => {
         googleLogin()
             .then(() => {
                 toast.success('Google Login SuccessFully')
+                navigate(from)
             })
         
     }
+
+
+
+
     
 
     return (
