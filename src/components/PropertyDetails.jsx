@@ -9,6 +9,7 @@ import { FiCheckSquare } from "react-icons/fi";
 // agent profile icons
 import { MdOutlineVerified } from "react-icons/md";
 import { FaBlenderPhone } from "react-icons/fa";
+import { FaBookmark } from "react-icons/fa6";
 
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
@@ -26,6 +27,20 @@ const PropertyDetails = () => {
     const { estate_title, agent, image_url, description, image_url_1, image_url_2, image_url_3, image_url_4, details_location, additional_details, bathrooms, area, status, price, bedrooms, facilities } = data;
     const { details, image, name } = agent;
     console.log(data);
+
+
+    const addToLs = () => {
+        const saveData = JSON.parse(localStorage.getItem('bookmarked')) || [];
+        const isExists = saveData.find(data => data.id == id);
+        if (isExists) {
+            alert('add this before')
+        } else {
+            saveData.push(data);
+            localStorage.setItem('bookmarked', JSON.stringify(saveData));
+            alert('You add succesfully')
+        }
+    }
+
     return (
         <div className='container mx-auto my-10'>
             <Helmet>
@@ -120,7 +135,7 @@ const PropertyDetails = () => {
                 {/* agent div */}
                 <div className='lg:col-span-2 p-4'>
 
-                    <div className='border border-rose-400 p-4 rounded-2xl'>
+                    <div className='border relative border-rose-400 p-4 rounded-2xl'>
 
                         <div>
                             <div>
@@ -139,7 +154,9 @@ const PropertyDetails = () => {
                             </div>
                         </div>
 
-
+                        
+                            <button onClick={addToLs} className='absolute border-2 p-2 rounded-full border-red-400 -top-5 text-4xl text-pink-500 -right-5'><FaBookmark /></button>
+                        
 
                     </div>
                 </div>

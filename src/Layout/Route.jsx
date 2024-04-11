@@ -10,6 +10,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import PropertyDetails from "../components/PropertyDetails";
 import PrivateRoute from "../components/PrivateRoute";
 import ErrorPage from "../components/ErrorPage";
+import Bookmarked from "../components/Bookmarked";
 
 
 export const router = createBrowserRouter([
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
                 path: '/view-property/:id',
                 element: <PrivateRoute> <PropertyDetails></PropertyDetails></PrivateRoute>,
                 loader:()=>fetch('../data.json')
+            },
+            {
+                path: '/bookmark',
+                element: <Bookmarked></Bookmarked>
             },
            
         ]

@@ -33,6 +33,7 @@ const Navbar = () => {
 
                         <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'text-lg hover:text-rose-500 '} to={'/'}>Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/update-profile'}>Update Profile</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/bookmark'}>Bookmarked</NavLink>
                         {
                             user && <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/user-profile'}> Profile</NavLink>
                         }
@@ -49,6 +50,8 @@ const Navbar = () => {
                 <div className="flex poppins gap-1 font-medium text-lg">
                     <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/'}>Home</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/update-profile'}>Update Profile</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/bookmark'}>Bookmarked</NavLink>
+
                     {
                         user && <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/user-profile'}>Profile</NavLink>
                     }
