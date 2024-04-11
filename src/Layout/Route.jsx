@@ -32,11 +32,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/update-profile',
-                element:<UpdateProfile></UpdateProfile>
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
             },
             {
                 path: '/user-profile',
-                element:<UserProfile></UserProfile>
+                element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
             },
             {
                 path: '/contact-us',

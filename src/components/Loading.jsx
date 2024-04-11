@@ -2,7 +2,7 @@
 
 const Loading = () => {
     return (
-        <div className="h-[100vh] flex justify-center items-center bg-slate-300">
+        <div className="h-[100vh] flex justify-center items-center">
             <div className="flex items-center">
                 <span className="loading text-rose-600 loading-bars loading-sm"></span>
                 <span className="loading text-red-600 loading-bars loading-xs"></span>

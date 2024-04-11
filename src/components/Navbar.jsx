@@ -5,7 +5,7 @@ import { AuthContext } from "./AuthContextComponent";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from "./Loading";
+// import Loading from "./Loading";
 
 const Navbar = () => {
 
@@ -17,9 +17,9 @@ const Navbar = () => {
         })
     }
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
 
     return (
         <div className="navbar container mx-auto bg-base-100 py-4">
