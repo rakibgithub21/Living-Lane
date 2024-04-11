@@ -5,11 +5,15 @@ import { AuthContext } from "./AuthContextComponent";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from "./Loading";
 // import Loading from "./Loading";
 
 const Navbar = () => {
 
-    const { logout,user } = useContext(AuthContext)
+    const { logout, user, loading } = useContext(AuthContext)
+    if (loading) {
+        return <Loading></Loading>
+    }
     const logoutUser = () => {
         logout()
             .then(() => {
@@ -53,8 +57,8 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ? <>
-                        <div title={user?.displayName} className="w-14 rounded-full">
-                            <img className="w-full rounded-full" src={user.photoURL} />
+                        <div title={user?.displayName} className=" rounded-full">
+                            <img className="rounded-full w-16 h-16 object-cover" src={user.photoURL} />
                         </div>
                         <button onClick={logoutUser} className="btn btn-primary ml-3">Logout</button>
                         
