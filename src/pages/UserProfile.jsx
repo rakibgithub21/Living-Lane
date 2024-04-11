@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../components/AuthContextComponent";
-import Loading from "../components/Loading";
+// import Loading from "../components/Loading";
 import {Navigate} from 'react-router-dom'
 import { Helmet } from "react-helmet-async";
 
@@ -9,9 +9,11 @@ const UserProfile = () => {
     if (!user) {
         return <Navigate to={'/login'}></Navigate>
     }
-    if (loading) {
-        return <Loading></Loading>
-    }
+
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
+
     return (
         <div className="flex justify-center items-center h-[65vh]">
             <Helmet>
