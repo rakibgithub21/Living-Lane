@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../components/AuthContextComponent";
-
+import {Navigate} from 'react-router-dom'
 
 const UpdateProfile = () => {
     const { user } = useContext(AuthContext);
-
+    if (!user) {
+        return<Navigate to={'/login'}></Navigate>
+    }
     return (
         
         <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">

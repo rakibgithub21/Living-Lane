@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
-    const { logout,loading,user } = useContext(AuthContext)
+    const { logout,user } = useContext(AuthContext)
     const logoutUser = () => {
         logout()
             .then(() => {
@@ -17,9 +17,6 @@ const Navbar = () => {
         })
     }
 
-    // if (loading) {
-    //     return <Loading></Loading>
-    // }
 
     return (
         <div className="navbar container mx-auto bg-base-100 py-4">
@@ -32,8 +29,10 @@ const Navbar = () => {
 
                         <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'text-lg hover:text-rose-500 '} to={'/'}>Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/update-profile'}>Update Profile</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/user-profile'}>User Profile</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/contact-us'}>Contact Us</NavLink>
+                        {
+                            user && <NavLink className={({ isActive }) => isActive ? ' text-lg font-medium text-[#0aa9be] underline rounded' : 'hover:text-rose-500 text-lg '} to={'/user-profile'}>User Profile</NavLink>
+                        }
+                        
                        
                     </ul>
                 </div>
@@ -45,9 +44,10 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <div className="flex poppins gap-1 font-medium text-lg">
                     <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/'}>Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/contact-us'}>Contact Us</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/update-profile'}>Update Profile</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/user-profile'}>User Profile</NavLink>
+                    {
+                        user && <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/user-profile'}>User Profile</NavLink>
+                    }
                 </div>
             </div>
             <div className="navbar-end">

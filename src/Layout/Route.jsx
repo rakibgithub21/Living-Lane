@@ -5,17 +5,18 @@ import MainLayout from "./MainLayout";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Registration from "../pages/Registration";
-import Contactus from "../pages/Contactus";
 import UserProfile from "../pages/UserProfile";
 import UpdateProfile from "../pages/UpdateProfile";
 import PropertyDetails from "../components/PropertyDetails";
 import PrivateRoute from "../components/PrivateRoute";
+import ErrorPage from "../components/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
+        errorElement:<ErrorPage></ErrorPage>,
         // error page:
         children: [
             {
@@ -37,10 +38,6 @@ export const router = createBrowserRouter([
             {
                 path: '/user-profile',
                 element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
-            },
-            {
-                path: '/contact-us',
-                element:<Contactus></Contactus>
             },
             {
                 path: '/view-property/:id',
