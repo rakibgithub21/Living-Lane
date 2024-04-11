@@ -5,15 +5,22 @@ import { AuthContext } from "./AuthContextComponent";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from "./Loading";
 
 const Navbar = () => {
-    const { logout } = useContext(AuthContext)
+
+    const { logout,loading,user } = useContext(AuthContext)
     const logoutUser = () => {
         logout()
             .then(() => {
             toast.success('Logout SuccessFully')
         })
     }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div className="navbar container mx-auto bg-base-100 py-4">
             <div className="navbar-start">
@@ -36,16 +43,24 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <div className="flex poppins gap-5 font-medium text-lg">
-                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-6' : 'py-3 px-6 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/'}>Home</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-6' : 'py-3 px-6 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/update-profile'}>Update Profile</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-6' : 'py-3 px-6 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/user-profile'}>User Profile</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-6' : 'py-3 px-6 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/contact-us'}>Contact Us</NavLink>
+                <div className="flex poppins gap-1 font-medium text-lg">
+                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/'}>Home</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/contact-us'}>Contact Us</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/update-profile'}>Update Profile</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'border-2 font-semibold text-lg  text-[#10be0a] border-[#a3da5aee] py-3 rounded-xl px-5' : 'py-3 px-5 text-lg rounded-xl hover:bg-cyan-100 hover:text-blue-500 '} to={'/user-profile'}>User Profile</NavLink>
                 </div>
             </div>
             <div className="navbar-end">
-                <Link className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-lg md:px-6 md:py-3 py-2 px-4 " to={'/login'}>Log in</Link>
-                <button onClick={logoutUser} className="btn btn-primary ml-3">Logout</button>
+                {
+                    user ? <>
+                        <div title={user?.displayName} className="w-14 rounded-full">
+                            <img className="w-full rounded-full" src={user.photoURL} />
+                        </div>
+                        <button onClick={logoutUser} className="btn btn-primary ml-3">Logout</button>
+                        
+                    </> : <Link className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-lg md:px-6 md:py-3 py-2 px-4 " to={'/login'}>Log in</Link>
+                }
+                
             </div>
             <ToastContainer position="top-center"/>
         </div>

@@ -7,7 +7,7 @@ import { AuthContext } from "../components/AuthContextComponent";
 // import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate, useLocation } from 'react-router-dom'
-import 'react-toastify/dist/ReactToastify.css';;
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -41,7 +41,8 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error.message);
-                setError(error.message)
+                setError(error.message);
+                console.log(error.message);
             })
         
 
@@ -83,6 +84,9 @@ const Login = () => {
                         </p> */}
                         {errors.password && <span className="text-red-500">This field is required</span>}
                     </div>
+                    {
+                        error && <p className="text-xl text-red-500">{ error}</p>
+                    }
                     <button type="submit" className="block btn hover:text-white text-xl btn-success w-full">Login</button>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
