@@ -12,12 +12,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    const { signInUser, googleLogin } = useContext(AuthContext)
+    const { signInUser, setLoading, googleLogin } = useContext(AuthContext)
     const [error,setError] = useState('')
 
     const location = useLocation();
+    // console.log('location in the login page',location);
     const navigate = useNavigate();
-    const from = location?.state || '/'
+    // const from = location?.state || '/'
+   
 
     // const [showPassword, setShowPassword] = useState(false)
     // const handlePassword = () => {
@@ -37,9 +39,11 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success('Login SuccessFully')
-                navigate(from)
+                // navigate(from)
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
+                setLoading(false)
                 setError(error.message);
             })
         
@@ -50,7 +54,8 @@ const Login = () => {
         googleLogin()
             .then(() => {
                 toast.success('Google Login SuccessFully')
-                navigate(from)
+                // navigate(from)
+                navigate(location?.state ? location.state : '/')
             })
         
     }

@@ -13,13 +13,13 @@ const AuthContextComponent = ({ children }) => {
 
     //create user:
     const createUser = (email, password) => {
-        // setLoading(true)
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     // sign in user:
     const signInUser = (email, password) => {
-        // setLoading(true)
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -39,6 +39,7 @@ const AuthContextComponent = ({ children }) => {
     //sign out user
 
     const logout = () => {
+        setUser(null)
         setLoading(true)
         return signOut(auth)
     }
@@ -46,7 +47,7 @@ const AuthContextComponent = ({ children }) => {
     // google login:
 
     const googleLogin = () => {
-        // setLoading(true)
+        setLoading(true)
         return signInWithPopup(auth, googleProvider);
     }
 
@@ -58,9 +59,7 @@ const AuthContextComponent = ({ children }) => {
             setLoading(false)
         })
 
-        return () => {
-            return unsubscribe()
-        }
+        return ()=>unsubscribe()
     }, [])
 
 
@@ -73,6 +72,7 @@ const AuthContextComponent = ({ children }) => {
         logout,
         googleLogin,
         loading,
+        setLoading
 
 
     }

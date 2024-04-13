@@ -8,11 +8,13 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import { set } from "firebase/database";
 
 
 
 const Registration = () => {
-    const { createUser, updateUser, logout } = useContext(AuthContext);
+    const { createUser, setLoading, updateUser, logout } = useContext(AuthContext);
+    const[error,setError] = useState('')
     // for password show and hide
     const [showPassword, setShowPassword] = useState(false)
     const handlePassword = () => {
@@ -44,6 +46,8 @@ const Registration = () => {
                 
             })
             .catch(error => {
+                setLoading(false)
+                setError(error.message)
             console.log(error.message);
         })
         
@@ -110,6 +114,9 @@ const Registration = () => {
                             <p className="text-red-500">Password must contain at least one lowercase letter</p>
                         )}
                     </div>
+                    {
+                        error && <p className="text-red-500">{error}</p>
+                    }
                     <button type="submit" className="block text-xl font-medium text-white bg-[#4556ebea] hover:text-black hover:bg-[#4652c081] py-4 rounded-xl w-full">Login</button>
                 </form>
                 <p className="text-lg text-center  sm:px-6 dark:text-gray-600">Already have an account?
