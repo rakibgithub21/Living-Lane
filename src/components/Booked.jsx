@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BiSolidMessageDetail } from 'react-icons/bi';
 import { FaBlenderPhone } from 'react-icons/fa6';
 import { MdEmail, MdOutlineVerified } from "react-icons/md";

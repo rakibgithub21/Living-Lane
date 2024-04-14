@@ -10,13 +10,14 @@ import Loading from "./Loading";
 
 const Navbar = () => {
 
-    const { logout, user, loading } = useContext(AuthContext)
+    const { logout, user,setLoading, loading } = useContext(AuthContext)
     if (loading) {
         return <Loading></Loading>
     }
     const logoutUser = () => {
         logout()
             .then(() => {
+            setLoading(false)
             toast.success('Logout SuccessFully')
         })
     }

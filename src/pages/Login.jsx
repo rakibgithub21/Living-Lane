@@ -14,13 +14,13 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
 
     const { signInUser, setLoading, googleLogin } = useContext(AuthContext)
-    const [error,setError] = useState('')
+    const [error, setError] = useState('')
 
     const location = useLocation();
     // console.log('location in the login page',location);
     const navigate = useNavigate();
     // const from = location?.state || '/'
-   
+
 
     // const [showPassword, setShowPassword] = useState(false)
     // const handlePassword = () => {
@@ -47,7 +47,7 @@ const Login = () => {
                 setLoading(false)
                 setError(error.message);
             })
-        
+
 
     }
     // google login:
@@ -58,13 +58,13 @@ const Login = () => {
                 // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
-        
+
     }
 
 
 
 
-    
+
 
     return (
         <div className="min-h-[calc(100vh-410px)]  flex justify-center items-center">
@@ -89,7 +89,7 @@ const Login = () => {
                         {errors.password && <span className="text-red-500">This field is required</span>}
                     </div>
                     {
-                        error && <p className="text-xl text-red-500">{ error}</p>
+                        error && <p className="text-xl text-red-500">{error}</p>
                     }
                     <button type="submit" className="block btn hover:text-white text-xl btn-success w-full">Login</button>
                 </form>
@@ -122,7 +122,7 @@ const Login = () => {
 
                 </p>
             </div>
-            <ToastContainer position="top-center"/>
+            <ToastContainer position="top-center" />
         </div>
     );
 };
