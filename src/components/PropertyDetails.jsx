@@ -14,6 +14,8 @@ import { FaBookmark } from "react-icons/fa6";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { Helmet } from 'react-helmet-async';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import image1 from '../assets/images/1.jpg'
 // import image2 from '../assets/images/2.jpg'
@@ -33,18 +35,19 @@ const PropertyDetails = () => {
         const saveData = JSON.parse(localStorage.getItem('bookmarked')) || [];
         const isExists = saveData.find(data => data.id == id);
         if (isExists) {
-            alert('add this before')
+            toast.error('You add this before')
+            
         } else {
             saveData.push(data);
             localStorage.setItem('bookmarked', JSON.stringify(saveData));
-            alert('You add succesfully')
+            toast.success('You Add this successfully')
         }
     }
 
     return (
         <div className='container mx-auto my-10'>
             <Helmet>
-                <title>LivingLane || Property Details { id}</title>
+                <title>LivingLane || Property Details {id}</title>
             </Helmet>
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-10'>
 
@@ -117,7 +120,7 @@ const PropertyDetails = () => {
                         <div className='flex gap-5 mt-5'>
                             {
                                 facilities?.map((facility, idx) => <p
-                                    className='raleway flex gap-1 items-center font-medium text-xl'
+                                    className='raleway flex gap-1 text-lg items-center md:font-medium md:text-xl'
                                     key={idx}
                                 ><FiCheckSquare className='text-green-500' />{facility}</p>)
                             }
@@ -154,16 +157,16 @@ const PropertyDetails = () => {
                             </div>
                         </div>
 
-                        
-                            <button onClick={addToLs} className='absolute border-2 p-2 rounded-full border-red-400 -top-5 text-4xl text-pink-500 -right-5'><FaBookmark /></button>
-                        
+
+                        <button onClick={addToLs} className='absolute border-2 p-2 rounded-full border-red-400 -top-5 text-4xl text-pink-500 -right-5'><FaBookmark /></button>
+
 
                     </div>
                 </div>
 
 
             </div>
-
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
