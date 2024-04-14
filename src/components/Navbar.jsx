@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import navLogo from '../assets/acquisition_12140441.png'
 import { useContext } from "react";
 import { AuthContext } from "./AuthContextComponent";
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "./Loading";
@@ -66,7 +66,7 @@ const Navbar = () => {
                 {
                     user ? <>
                         <div title={user?.displayName} className=" rounded-full">
-                            <img className="rounded-full w-16 h-16 object-cover" src={user.photoURL} />
+                            <img className="rounded-full w-14 h-14 object-cover" src={user.photoURL} />
                         </div>
                         <button onClick={logoutUser} className="btn btn-primary ml-3">Logout</button>
                         
@@ -74,7 +74,7 @@ const Navbar = () => {
                 }
                 
             </div>
-            <ToastContainer position="top-center"/>
+            
         </div>
     );
 };
