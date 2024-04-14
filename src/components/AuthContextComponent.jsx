@@ -13,7 +13,7 @@ const AuthContextComponent = ({ children }) => {
 
     //create user:
     const createUser = (email, password) => {
-        setLoading(true)
+        // setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 

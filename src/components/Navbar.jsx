@@ -16,9 +16,14 @@ const Navbar = () => {
     }
     const logoutUser = () => {
         logout()
-            .then(() => {
-            toast.success('Logout SuccessFully')
+        .then(() => {
+            // Sign-out successful.
+            console.log('Sign-out successful');
         })
+            .catch((error) => {
+                // An error happened.
+                console.log(error);
+        });
     }
 
 
