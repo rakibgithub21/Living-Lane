@@ -6,15 +6,15 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../components/AuthContextComponent";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
-import { set } from "firebase/database";
 
 
 
 const Registration = () => {
     const { createUser, setLoading, updateUser, logout } = useContext(AuthContext);
-    const[error,setError] = useState('')
+    const [error, setError] = useState('')
+    
+    
     // for password show and hide
     const [showPassword, setShowPassword] = useState(false)
     const handlePassword = () => {

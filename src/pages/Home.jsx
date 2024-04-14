@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Agent from "../components/Agent";
 import Best from "../components/Best";
 import Cards from "../components/Cards";
+import Slider from "../components/Slider";
 
 
 const Home = () => {
@@ -11,7 +12,9 @@ const Home = () => {
         <div className="container mx-auto">
             <Helmet>
                 <title>LivingLane | Home</title>
-           </Helmet>
+            </Helmet>
+            
+            <Slider></Slider>
             {/* slider */}
 
             {/* all cards */}
