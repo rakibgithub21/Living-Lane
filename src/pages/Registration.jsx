@@ -40,7 +40,6 @@ const Registration = () => {
                 // update user
                 updateUser(name, image)
                 // logout imidieatly
-                setLoading(false)
                 logout()
                 toast.success("Registration success.Login now")
                 navigate('/login')
