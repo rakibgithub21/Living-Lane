@@ -11,6 +11,7 @@ import { FaLock } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate, useLocation } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -79,6 +80,9 @@ const Login = () => {
 
     return (
         <div className="min-h-[calc(100vh-410px)]  flex justify-center items-center">
+            <Helmet>
+                <title>LivingLane || Login</title>
+            </Helmet>
             <div className="w-full md:w-4/6 lg:w-3/6 mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
 
                 <h1 className="text-3xl font-medium">Login To Your Account</h1>

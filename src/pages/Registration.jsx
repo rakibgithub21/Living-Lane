@@ -7,6 +7,7 @@ import { AuthContext } from "../components/AuthContextComponent";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -61,6 +62,9 @@ const Registration = () => {
 
     return (
         <div className="min-h-[calc(100vh-337px)] flex justify-center items-center">
+            <Helmet>
+                <title>LivingLane || Registration</title>
+            </Helmet>
             <div className="w-full md:w-4/6 lg:w-3/6 mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <div className="mb-10 space-y-8">
                     <p className="text-4xl text-center font-semibold">Registration your account</p>
