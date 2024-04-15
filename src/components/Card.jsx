@@ -3,7 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { LuBedSingle } from "react-icons/lu";
 import { LuBath } from "react-icons/lu";
 import { TbPointFilled } from "react-icons/tb";
-
+import PropTypes from 'prop-types';
 
 const Card = ({ card }) => {
     // console.log(card)
@@ -54,6 +54,10 @@ const Card = ({ card }) => {
 
         </div>
     );
+};
+
+Card.propTypes = {
+    card: PropTypes.object
 };
 
 export default Card;

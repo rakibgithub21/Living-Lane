@@ -8,7 +8,7 @@ import { AuthContext } from "../components/AuthContextComponent";
 import { MdMail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate, useLocation } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
@@ -61,6 +61,7 @@ const Login = () => {
                 // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
+            
 
     }
 
@@ -71,6 +72,7 @@ const Login = () => {
                 // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
+            
     }
 
 
@@ -140,7 +142,7 @@ const Login = () => {
 
                 </p>
             </div>
-            <ToastContainer position="top-center" />
+           
         </div>
     );
 };

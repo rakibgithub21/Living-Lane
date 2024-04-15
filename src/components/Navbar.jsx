@@ -6,6 +6,7 @@ import { AuthContext } from "./AuthContextComponent";
 
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "./Loading";
+import { toast } from "react-toastify";
 // import Loading from "./Loading";
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
         logout()
         .then(() => {
             // Sign-out successful.
-            console.log('Sign-out successful');
+           toast.success('Sign-out successful');
         })
             .catch((error) => {
                 // An error happened.
@@ -65,7 +66,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ? <>
-                        <div title={user?.displayName} className=" rounded-full">
+                        <div title={user?.displayName ? user.displayName :'Unknown'} className=" rounded-full">
                             <img className="rounded-full w-14 h-14 object-cover" src={user.photoURL} />
                         </div>
                         <button onClick={logoutUser} className="btn btn-primary ml-3">Logout</button>

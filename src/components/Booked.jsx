@@ -3,6 +3,7 @@ import { BiSolidMessageDetail } from 'react-icons/bi';
 import { FaBlenderPhone } from 'react-icons/fa6';
 import { MdEmail, MdOutlineVerified } from "react-icons/md";
 import {useNavigate} from 'react-router-dom' 
+import PropTypes from 'prop-types';
 
 const Booked = ({ booked }) => {
     const navigate = useNavigate();
@@ -51,5 +52,7 @@ const Booked = ({ booked }) => {
         </div>
     );
 };
-
+Booked.propTypes = {
+    booked: PropTypes.object
+};
 export default Booked;

@@ -2,22 +2,17 @@ import { useContext } from "react";
 import { AuthContext } from "../components/AuthContextComponent";
 import { Navigate } from 'react-router-dom'
 import { useForm } from "react-hook-form";
-import Loading from "../components/Loading";
 import { Helmet } from "react-helmet-async";
 
 
 
 const UpdateProfile = () => {
-    const { user, updateUser, loading } = useContext(AuthContext);
+    const { user, updateUser } = useContext(AuthContext);
     const { register, handleSubmit } = useForm();
 
     if (!user) {
         return <Navigate to={'/login'}></Navigate>;
     }
-
-    // if (loading) {
-    //     return <Loading></Loading>;
-    // }
 
     const onSubmit = (data) => {
         const { name, image, email } = data;

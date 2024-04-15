@@ -5,7 +5,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../components/AuthContextComponent";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 
@@ -38,12 +38,20 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                // update user
-                updateUser(name, image)
-                // logout imidieatly
-                logout()
                 toast.success("Registration success.Login now")
-                navigate('/login')
+
+                updateUser(name, image)
+                    .then(() => {
+                        logout()
+                        // setTimeout(() => {
+                        //     navigate('/login');
+                        // }, 500);
+                        navigate('/login')
+                    })
+                    .catch(() => {
+                        console.log('error');
+                })
+               
                 
             })
             .catch(error => {
@@ -99,7 +107,7 @@ const Registration = () => {
                             }
                             
                         
-                        })} type={showPassword ?"text":"password"} id="password" placeholder="Type Your Email" className="input focus:ring-2 focus:ring-stone-950 ring-1 ring-indigo-500 input-bordered w-full" />
+                        })} type={showPassword ?"text":"password"} id="password" placeholder="Type Your Password" className="input focus:ring-2 focus:ring-stone-950 ring-1 ring-indigo-500 input-bordered w-full" />
                         <p onClick={handlePassword} className="absolute top-11 right-5">
                             {
                                 showPassword ? <FaRegEye className="text-xl" /> : <FaRegEyeSlash className="text-xl" />
@@ -127,7 +135,7 @@ const Registration = () => {
                     <Link className="underline font-medium hover:text-blue-400 text-lg" to={'/login'}>Login</Link>
                 </p>
             </div>
-            <ToastContainer position="top-center"/>
+           
         </div>
     );
 };
