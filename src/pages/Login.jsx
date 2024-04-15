@@ -62,7 +62,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
             })
             .catch(() => {
-            // setLoading(false)
+            setLoading(false)
         })
             
 
