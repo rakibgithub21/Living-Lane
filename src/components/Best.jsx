@@ -2,14 +2,15 @@ import { SlLocationPin } from "react-icons/sl";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiMoneyStack } from "react-icons/gi";
 import { FaFileAlt } from "react-icons/fa";
+import 'animate.css';
 
 const Best = () => {
     return (
         <section>
-            <h3 className="text-5xl text-center font-medium my-20 hover:text-rose-400 transition-colors duration-300 raleway underline">Why Choose Us</h3>
+            <h3 className="text-5xl animate__animated animate__swing text-center font-medium my-20 hover:text-rose-400 transition-colors duration-300 raleway underline">Why Choose Us</h3>
             <div className="flex flex-wrap justify-evenly gap-10 ">
                 {/* various location */}
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" className="border-4 rounded-xl w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
+                <div  className="border-4 rounded-xl w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
                     <div className="w-20 h-20 flex items-center justify-center rounded-full border-4 border-[#bc986b99] text-[#bc986b99]">
                         <SlLocationPin className="text-4xl" />
                     </div>
@@ -21,7 +22,7 @@ const Best = () => {
 
                 </div>
                 {/* Financial made easy */}
-                <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" className="border-4 rounded-xl  w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
+                <div  className="border-4 rounded-xl  w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
                     <div className="w-20 h-20 flex items-center justify-center rounded-full border-4 border-[#bc986b99] text-[#bc986b99]">
                         <FaPeopleGroup className="text-4xl" />
                     </div>
@@ -33,7 +34,7 @@ const Best = () => {
 
                 </div>
                 {/* Trusted by People */}
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" className="border-4 rounded-xl w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
+                <div  className="border-4 rounded-xl w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
                     <div className="w-20 h-20 flex items-center justify-center rounded-full border-4 border-[#bc986b99] text-[#bc986b99]">
                         <GiMoneyStack className="text-4xl" />
                     </div>
@@ -45,7 +46,7 @@ const Best = () => {
 
                 </div>
                 {/* Top Agent */}
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" className="border-4 rounded-xl  w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
+                <div  className="border-4 rounded-xl  w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
                     <div className="w-20 h-20 flex items-center justify-center rounded-full border-4 border-[#bc986b99] text-[#bc986b99]">
                         <FaFileAlt className="text-4xl" />
                     </div>

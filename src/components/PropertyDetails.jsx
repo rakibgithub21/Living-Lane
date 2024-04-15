@@ -120,7 +120,7 @@ const PropertyDetails = () => {
                         <div className='flex gap-5 mt-5'>
                             {
                                 facilities?.map((facility, idx) => <p
-                                    className='raleway flex gap-1 text-lg items-center md:font-medium md:text-xl'
+                                    className='raleway flex gap-1  text-lg items-center md:font-medium md:text-xl'
                                     key={idx}
                                 ><FiCheckSquare className='text-green-500' />{facility}</p>)
                             }
@@ -145,7 +145,7 @@ const PropertyDetails = () => {
                                 <img className='w-full object-cover h-[300px] rounded-2xl' src={image} alt="" />
                                 <div className='px-6 py-2 mb-2'>
                                     <p className='text-4xl  font-semibold raleway'>{name}</p>
-                                    <p className='raleway font-medium flex gap-1 text-xl'>Verified Agent <span><MdOutlineVerified className='text-blue-600' /></span></p>
+                                    <p className='raleway font-medium flex my-1 gap-1 text-xl animate__animated animate__flash animate__slower animate__infinite'>Verified Agent <span><MdOutlineVerified className='text-blue-600' /></span></p>
                                     <p className='mb-2 font-medium raleway'>{estate_title}</p>
                                     <p className='text-lg poppins'>{details}</p>
                                 </div>

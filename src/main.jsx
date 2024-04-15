@@ -7,6 +7,7 @@ import AuthContextComponent from './components/AuthContextComponent.jsx'
 import { HelmetProvider } from 'react-helmet-async';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import 'animate.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

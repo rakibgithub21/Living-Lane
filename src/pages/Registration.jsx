@@ -72,7 +72,7 @@ const Registration = () => {
             </Helmet>
             <div className="w-full md:w-4/6 lg:w-3/6 mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <div className="mb-10 space-y-8">
-                    <p className="text-4xl text-center font-semibold">Registration your account</p>
+                    <p className="text-4xl text-center font-semibold animate__animated animate__heartBeat">Registration your <span className="font-bold raleway text-rose-400">account</span></p>
                     <p className="text-xl text-center mx-auto md:w-3/4 ">Welcome to our platform! Please fill out the following information to create your account. Your security is our top priority, so please ensure that you provide accurate information.
                     </p>
                 </div>

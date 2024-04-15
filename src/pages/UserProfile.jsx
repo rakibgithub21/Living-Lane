@@ -11,7 +11,7 @@ const UserProfile = () => {
     }
 
     return (
-        <div className="flex justify-center items-center h-[65vh]">
+        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className="flex justify-center items-center h-[65vh]">
             <Helmet>
                 <title>LivingLane | Profile</title>
             </Helmet>

@@ -4,6 +4,7 @@ import { LuBedSingle } from "react-icons/lu";
 import { LuBath } from "react-icons/lu";
 import { TbPointFilled } from "react-icons/tb";
 import PropTypes from 'prop-types';
+import 'animate.css';
 
 const Card = ({ card }) => {
     // console.log(card)
