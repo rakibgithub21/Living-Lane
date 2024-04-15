@@ -20,7 +20,9 @@ Living Lane is not just a website; it's your gateway to a world of possibilities
 
 5. **Personalized User Experience**: Create your personalized profile and easily bookmark your favorite listings for future reference. The private "Bookmarked" section allows you to conveniently manage your saved listings, ensuring a tailored and user-centric experience.
 
-6. **Profile Update**: Seamlessly update your profile details by navigating to the "Update Profile" route. Whether it's changing your contact information, updating your preferences, or adding additional details, Living Lane makes it easy for you to keep your profile up-to-date and accurate.
+6. **Bookmark Status Message**: Living Lane provides a helpful message if the bookmark section is empty, guiding users to start bookmarking their favorite listings. Conversely, if the bookmarked section contains items, they are displayed, allowing users to easily access their saved listings.
+
+7. **Profile Update**: Seamlessly update your profile details by navigating to the "Update Profile" route. Whether it's changing your contact information, updating your preferences, or adding additional details, Living Lane makes it easy for you to keep your profile up-to-date and accurate.
 
 
 
@@ -40,7 +42,7 @@ Living Lane leverages cutting-edge technologies to deliver a seamless user exper
 
 ## Feedback and Support
 
-We value your feedback! If you have any questions, suggestions, or need assistance, please don't hesitate to reach out to our support team at support@livinglane.com. We're here to help you find your ideal living space and make your journey with Living Lane as smooth as possible.
+We value your feedback! If you have any questions, suggestions, or need assistance, please don't hesitate to reach out to our support team at mdrakibulislam.mailbox@gmail.com. We're here to help you find your ideal living space and make your journey with Living Lane as smooth as possible.
 
 **Happy house hunting!**
 
