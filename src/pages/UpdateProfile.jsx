@@ -27,11 +27,11 @@ const UpdateProfile = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-700 to-indigo-600">
+        <div  className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-700 to-indigo-600">
             <Helmet>
                 <title>LivingLane || Update Profile </title>
             </Helmet>
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <div data-aos="zoom-out-down" data-aos-duration="1000" data-aos-delay="100" className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
                 <h1 className="text-3xl font-semibold text-center mb-6 text-gray-800 dark:text-white">Update Your Profile</h1>
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
                     Welcome, <span className="font-semibold text-lg">{user.displayName}</span>! You can update your details below:
