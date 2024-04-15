@@ -18,6 +18,12 @@ Living Lane is not just a website; it's your gateway to a world of possibilities
 - **Bookmark Status Message**: Receive helpful messages guiding you to start bookmarking favorite listings if the bookmark section is empty, while conveniently accessing saved listings if items are present.
 - **Profile Update**: Seamlessly update profile details including contact information, preferences, and additional details with ease through the "Update Profile" route.
 
+## NPM Packages Used For Bonus:
+
+- [Animate.css](https://animate.style/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Swiper.js](https://swiperjs.com/)
+- [AOS](https://michalsnik.github.io/aos/)
 
 ## Technologies Used
 
@@ -39,8 +45,4 @@ We value your feedback! If you have any questions, suggestions, or need assistan
 
 **Happy house hunting!**
 
-*NPM Packages Used For Bonus:*
-- [Animate.css](https://animate.style/)
-- [React Hook Form](https://react-hook-form.com/)
-- [Swiper.js](https://swiperjs.com/)
-- [AOS](https://michalsnik.github.io/aos/)
+
