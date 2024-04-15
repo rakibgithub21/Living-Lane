@@ -27,9 +27,9 @@ const Booked = ({ booked }) => {
                             <p className='raleway text-lg flex mt-2 animate__animated animate__flash animate__slower animate__infinite  '>Verified Agent <span><sup><MdOutlineVerified className='text-lg text-blue-600' /></sup></span></p>
                             
                             <div className='flex gap-5 mt-5'>
-                                <p className=' px-4 py-2 bg-slate-300 cursor-pointer font-bold rounded-2xl flex items-center gap-1 text-sm text-black'><FaBlenderPhone />Call</p>
-                                <p className=' px-4 py-4 bg-gray-300 cursor-pointer flex items-center gap-1 font-bold rounded-2xl text-sm text-black'><BiSolidMessageDetail />Message</p>
-                                <p className=' cursor-pointer bg-zinc-300 px-4 flex items-center gap-1 py-2 font-bold rounded-2xl text-sm text-black'><MdEmail />Email</p>
+                                <p className=' px-4 py-2 bg-slate-300 cursor-pointer font-bold rounded-2xl flex items-center gap-1 text-sm text-black border hover:border-pink-400 transition-all duration-300'><FaBlenderPhone />Call</p>
+                                <p className=' px-4 py-4 bg-gray-300 cursor-pointer flex items-center gap-1 font-bold rounded-2xl text-sm text-black border hover:border-pink-400 transition-all duration-300'><BiSolidMessageDetail />Message</p>
+                                <p className=' cursor-pointer bg-zinc-300 px-4 flex items-center gap-1 py-2 font-bold rounded-2xl text-sm text-black border hover:border-pink-400 transition-all duration-300'><MdEmail />Email</p>
                         </div>
                             
                             

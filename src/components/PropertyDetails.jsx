@@ -150,10 +150,10 @@ const PropertyDetails = () => {
                                     <p className='text-lg poppins'>{details}</p>
                                 </div>
                                 <div className='flex flex-wrap items-center justify-center gap-2'>
-                                    <p className='border px-6 py-4 cursor-pointer font-bold rounded-2xl flex items-center gap-1 text-lg text-black'><FaBlenderPhone />Call</p>
-                                    <p className='border px-6 py-4 cursor-pointer flex items-center gap-1 font-bold rounded-2xl text-lg text-black'><BiSolidMessageDetail />Message</p>
+                                    <p className='border px-6 py-4 cursor-pointer font-bold rounded-2xl flex items-center gap-1 text-lg text-black hover:border-pink-400 transition-all duration-300'><FaBlenderPhone />Call</p>
+                                    <p className='border px-6 py-4 cursor-pointer flex items-center gap-1 font-bold rounded-2xl text-lg text-black hover:border-pink-400 transition-all duration-300'><BiSolidMessageDetail />Message</p>
                                     <p className='border cursor-pointer px-6 flex 
-                                    items-center gap-1 py-4 font-bold rounded-2xl text-lg text-black'><MdEmail />Email</p>
+                                    items-center gap-1 py-4 font-bold rounded-2xl text-lg text-black hover:border-pink-400 transition-all duration-300'><MdEmail />Email</p>
                                 </div>
                             </div>
                         </div>

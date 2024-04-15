@@ -7,7 +7,7 @@ import 'animate.css';
 const Best = () => {
     return (
         <section>
-            <h3 className="text-5xl animate__animated animate__swing text-center font-medium my-20 hover:text-rose-400 transition-colors duration-300 raleway underline">Why Choose Us</h3>
+            <h3 className="text-5xl animate__animated animate__swing animate__slower animate__infinite text-center font-medium my-20 hover:text-rose-400 transition-colors duration-300 raleway underline">Why Choose Us</h3>
             <div className="flex flex-wrap justify-evenly gap-10 ">
                 {/* various location */}
                 <div  className="border-4 rounded-xl w-[350px] border-[#9a9a9a] p-10 space-y-10 hover:border-[#bc986b99]">
