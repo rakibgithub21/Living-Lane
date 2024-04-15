@@ -5,8 +5,8 @@ import { AuthContext } from "../components/AuthContextComponent";
 // import { FaRegEye } from "react-icons/fa";
 // import { FaRegEyeSlash } from "react-icons/fa";
 // import { useState } from "react"
-import { MdMail } from "react-icons/md";
-import { FaLock } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+import { CiLock } from "react-icons/ci";
 
 import { toast } from 'react-toastify';
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -66,13 +66,17 @@ const Login = () => {
     }
 
     // github login
-    
     const loginWithGithub = () => {
         githubLogin()
             .then(() => {
                 toast.success('Github Login SuccessFully')
                 navigate(location?.state ? location.state : '/')
             })
+            .catch((error) => {
+                console.log(error);
+                setLoading(false)
+                setError(error.message)
+        })
             
     }
 
@@ -94,7 +98,7 @@ const Login = () => {
                     <div className="space-y-1 text-lg relative">
                         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
                         <input {...register("email", { required: true })} type="email" id="email" placeholder="Type Your Email" className="input pl-7 input-bordered w-full" />
-                        <p className="absolute top-11 left-2"><MdMail /></p>
+                        <p className="absolute top-11 left-2"><CiMail /></p>
                         {errors.email && <span className="text-red-500">This field is required</span>}
 
                     </div>
@@ -106,7 +110,7 @@ const Login = () => {
                                 showPassword ? <FaRegEye className="text-xl" /> : <FaRegEyeSlash className="text-xl" />
                             }
                         </p> */}
-                        <p className="absolute top-11 left-2"><FaLock /></p>
+                        <p className="absolute top-11 left-2"><CiLock /></p>
                         {errors.password && <span className="text-red-500">This field is required</span>}
                     </div>
                     {

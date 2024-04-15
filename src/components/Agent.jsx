@@ -19,7 +19,7 @@ const Agent = () => {
                 <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12  md:grid-cols-2 lg:grid-cols-3">
                    
                     
-                   <div className="space-y-4 border px-4 py-2 rounded-xl shadow-md ">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="space-y-4 border px-4 py-2 rounded-xl shadow-md ">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-lg" src={person1} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Sarah Ali</h4>
@@ -33,7 +33,7 @@ const Agent = () => {
                         </div>
                         
                     </div>
-                    <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
+                    <div data-aos="fade-up" data-aos-duration="1000" className="space-y-4 border px-4 py-2 rounded-md shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={person2} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Thomas Leroy</h4>
@@ -46,7 +46,7 @@ const Agent = () => {
                             </div>
                         </div>
                     </div>
-                   <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
+                    <div data-aos="fade-left" data-aos-duration="1000" className="space-y-4 border px-4 py-2 rounded-md shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={person3} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Alex Jenkins</h4>
@@ -60,7 +60,7 @@ const Agent = () => {
                             </div>
                         </div>
                     </div>
-                   <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="space-y-4 border px-4 py-2 rounded-md shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={person4} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Emily Ken</h4>
@@ -73,7 +73,7 @@ const Agent = () => {
                             </div>
                         </div>
                     </div>
-                   <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
+                    <div data-aos="fade-down" data-aos-duration="1000" className="space-y-4 border px-4 py-2 rounded-md shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={person5} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">Anjo Lebra</h4>
@@ -86,7 +86,7 @@ const Agent = () => {
                             </div>
                         </div>
                     </div>
-                   <div className="space-y-4 border px-4 py-2 rounded-md shadow-md">
+                    <div data-aos="fade-left" data-aos-duration="1000" className="space-y-4 border px-4 py-2 rounded-md shadow-md">
                         <img alt="" className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm dark:bg-gray-500" src={person6} />
                         <div className="flex flex-col items-center">
                             <h4 className="text-xl font-semibold">David Jhon</h4>
