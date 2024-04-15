@@ -43,9 +43,6 @@ const Registration = () => {
                 updateUser(name, image)
                     .then(() => {
                         logout()
-                        // setTimeout(() => {
-                        //     navigate('/login');
-                        // }, 500);
                         navigate('/login')
                     })
                     .catch(() => {

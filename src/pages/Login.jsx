@@ -20,9 +20,9 @@ const Login = () => {
     const [error, setError] = useState('')
 
     const location = useLocation();
-    // console.log('location in the login page',location);
+    
     const navigate = useNavigate();
-    // const from = location?.state || '/'
+  
 
 
     // const [showPassword, setShowPassword] = useState(false)
@@ -54,22 +54,23 @@ const Login = () => {
 
     }
     // google login:
+
     const loginWithGoogle = () => {
         googleLogin()
             .then(() => {
                 toast.success('Google Login SuccessFully')
-                // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
             
 
     }
 
+    // github login
+    
     const loginWithGithub = () => {
         githubLogin()
             .then(() => {
                 toast.success('Github Login SuccessFully')
-                // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
             
