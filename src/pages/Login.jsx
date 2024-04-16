@@ -8,10 +8,11 @@ import { AuthContext } from "../components/AuthContextComponent";
 import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { useNavigate, useLocation } from 'react-router-dom'
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -42,7 +43,7 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success('Login SuccessFully')
+                // toast.success('Login SuccessFully')
                 // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
@@ -72,7 +73,7 @@ const Login = () => {
     const loginWithGithub = () => {
         githubLogin()
             .then(() => {
-                toast.success('Github Login SuccessFully')
+                // toast.success('Github Login SuccessFully')
                 navigate(location?.state ? location.state : '/')
             })
             .catch((error) => {
@@ -146,7 +147,7 @@ const Login = () => {
                     </button>
                 </div>
                 <p className="text-lg text-center animate__animated animate__backInUp sm:px-6 dark:text-gray-600">Don Not have an Account?
-                    <Link className="underline font-medium hover:text-blue-400 text-lg ml-2" to={'/registration'}>Register</Link>
+                    <Link className="underline font-medium text-rose-300 hover:text-blue-400 text-lg ml-2" to={'/registration'}>Register</Link>
 
                 </p>
             </div>

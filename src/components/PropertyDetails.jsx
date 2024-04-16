@@ -14,13 +14,9 @@ import { FaBookmark } from "react-icons/fa6";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { Helmet } from 'react-helmet-async';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-// import image1 from '../assets/images/1.jpg'
-// import image2 from '../assets/images/2.jpg'
-// import image3 from '../assets/images/3.jpg'
-// import image4 from '../assets/images/4.jpg'
+import { toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const PropertyDetails = () => {
     const datas = useLoaderData();
@@ -167,7 +163,7 @@ const PropertyDetails = () => {
 
 
             </div>
-            <ToastContainer></ToastContainer>
+            {/* <ToastContainer></ToastContainer> */}
         </div>
     );
 };
