@@ -6,6 +6,7 @@ import { AuthContext } from "./AuthContextComponent";
 
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "./Loading";
+import { toast } from "react-toastify";
 // import Loading from "./Loading";
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
         logout()
         .then(() => {
             // Sign-out successful.
-        //    toast.success('Sign-out successful');
+           toast.success('Log out successful');
         })
             .catch(() => {
                 // An error happened.
