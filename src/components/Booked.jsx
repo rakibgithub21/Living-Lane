@@ -24,7 +24,7 @@ const Booked = ({ booked }) => {
                     <div className="flex flex-col p-6 col-span-full row-span-full  lg:p-10">
                         <h1 className="text-3xl font-semibold">{booked.agent.name}</h1>
                         <div>
-                            <p className='raleway text-lg flex mt-2 animate__animated animate__flash animate__slower animate__infinite  '>Verified Agent <span><sup><MdOutlineVerified className='text-lg text-blue-600' /></sup></span></p>
+                            <p className='raleway text-lg flex mt-2'>Verified Agent <span><sup><MdOutlineVerified className='text-lg text-blue-600' /></sup></span></p>
                             
                             <div className='flex gap-5 mt-5'>
                                 <p className=' px-4 py-2 bg-slate-300 cursor-pointer font-bold rounded-2xl flex items-center gap-1 text-sm text-black border hover:border-pink-400 transition-all duration-300'><FaBlenderPhone />Call</p>

@@ -3,7 +3,7 @@
 
 Ready to embark on your journey to find the perfect living space? Visit our website at [Firebase LivingLane Live Link](https://assginement-9.web.app/)  [Netlify LivingLane Live Link](https://snazzy-kashata-92163e.netlify.app/) to get started today!
 
-Welcome to **Living Lane** - your ultimate destination for finding the perfect place to call home! Whether you're searching for a cozy apartment, a spacious single-family home, or a luxurious vacation rental, Living Lane has got you covered.
+Welcome to **LivingLane** - your ultimate destination for finding the perfect place to call home! Whether you're searching for a cozy apartment, a spacious single-family home, or a luxurious vacation rental, Living Lane has got you covered.
 
 ## About LivingLane
 

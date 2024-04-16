@@ -145,7 +145,7 @@ const PropertyDetails = () => {
                                 <img className='w-full object-cover h-[300px] rounded-2xl' src={image} alt="" />
                                 <div className='px-6 py-2 mb-2'>
                                     <p className='text-4xl  font-semibold raleway'>{name}</p>
-                                    <p className='raleway font-medium flex my-1 gap-1 text-xl animate__animated animate__flash animate__slower animate__infinite'>Verified Agent <span><MdOutlineVerified className='text-blue-600' /></span></p>
+                                    <p className='raleway font-medium flex my-1 gap-1 text-xl'>Verified Agent <span><MdOutlineVerified className='text-blue-600' /></span></p>
                                     <p className='mb-2 font-medium raleway'>{estate_title}</p>
                                     <p className='text-lg poppins'>{details}</p>
                                 </div>
@@ -159,7 +159,7 @@ const PropertyDetails = () => {
                         </div>
 
 
-                        <button onClick={addToLs} className='absolute border-2 p-2 rounded-full border-red-400 -top-5 text-4xl text-pink-500 -right-5'><FaBookmark /></button>
+                        <button onClick={addToLs} className='absolute  p-2 rounded-full  bg-purple-200 -top-5 text-4xl text-pink-500 -right-5'><FaBookmark /></button>
 
 
                     </div>
