@@ -43,7 +43,7 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                // toast.success('Login SuccessFully')
+                toast.success('Login SuccessFully')
                 // navigate(from)
                 navigate(location?.state ? location.state : '/')
             })
@@ -73,7 +73,7 @@ const Login = () => {
     const loginWithGithub = () => {
         githubLogin()
             .then(() => {
-                // toast.success('Github Login SuccessFully')
+                toast.success('Github Login SuccessFully')
                 navigate(location?.state ? location.state : '/')
             })
             .catch((error) => {
