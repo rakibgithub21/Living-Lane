@@ -11,11 +11,12 @@ const UserProfile = () => {
     }
 
     return (
-        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className="flex justify-center items-center h-[65vh]">
+        <div  className="flex bg-gradient-to-b from-slate-300 to-
+        bg-slate-50 justify-center items-center h-[65vh]">
             <Helmet>
                 <title>LivingLane | Profile</title>
             </Helmet>
-            <div className="min-w-36 bg-slate-200 rounded-md border p-8 sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" className="min-w-36 bg-slate-300 rounded-md border p-8 sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800 ">
                 <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                     <img src={user.photoURL} className="object-contain w-full h-full rounded dark:bg-gray-500" />
                 </div>

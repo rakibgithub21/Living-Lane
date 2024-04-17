@@ -27,7 +27,8 @@ const UpdateProfile = () => {
     };
 
     return (
-        <div  className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-700 to-indigo-600">
+        <div className="flex flex-col items-center justify-center min-h-[65vh] bg-gradient-to-b from-slate-300 to-
+        bg-slate-50">
             <Helmet>
                 <title>LivingLane || Update Profile </title>
             </Helmet>

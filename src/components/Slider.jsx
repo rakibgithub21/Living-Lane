@@ -32,7 +32,7 @@ const Slider = () => {
         backgroundImage: `url(${slide6})`,
     }
     return (
-        <div>
+        <div className="z-10">
             <Swiper
                 navigation={true}
                 pagination={{
